@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Personal Website</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Membres</a></li> 
+                <li><a href="#">Contact</a></li>   
+            </ul>  
+        </nav>
+        <div class="header-text">
+            <p>Bienvenue</p>
+            <h1>Bonjour, Nous sommes <br> équipe Chandmani</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="projet1/images/DSC04604.jpg">
+            </div>
+            <div class="about-col-2">
+            <h1 class="sub-title">à Propos de tir aux osselets</h1>  
+            <p></p>              
+               <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('est-ce que le tir aux osselets?')">Qu'est-ce que le tir aux osselets?</p>
+                <p class="tab-links" onclick="opentab('les compétitions en europe')">Les compétitions en Europe</p>
+               </div>
+               <div class="tab-contents active-tab" id="est-ce que le tir aux osselets?">
+                <ul>
+                    <li><span>Le tir aux osselets</span><br>Le Tir aux osselets est un jeu d'équipe populaire joué en Mongolie.
+                        Des équipes de six à huit joueurs lancent trente tablettes de marbre ressemblant à des dominos
+                        sur une surface en bois lisse vers une cible composée d'osselets de mouton dans le but de les faire tomber dans une zone cible 
+                        Il a été classé en 2014 au Patrimoine culturel immatériel de l’humanité de l' UNESCO 1</li>
+                        <li><span>Les équipes en Europe</span><br>En Europe, Il y a plus de 20 équipes de ce jeu dans plus de 10 pays européens</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="les compétitions en europe">
+                <ul>
+                    <li><span>Les compétitions en Europe</span><br>Tous les association de tir aux osselets en Europe organise un concours de championnat chaque an dans leurs pays résidés</li>
+                </ul>
+            </div>
+               </div>
+            </div>
+        </div>
+    </div> 
+<!-- ---------- membres --------------- -->
+<div id="membres">
+    <div class="container">
+        <h1 class="sub-title">Membres d'équipe</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="projet1/images/membre1.jpg">
+            </div>
+            <div class="work">
+                <img src="projet1/images/membre2.jpg">
+            </div>
+            <div class="work">
+                <img src="projet1/images/membre3.jpg">
+            </div>
+            <div class="work">
+                <img src="projet1/images/membre4.jpg">
+            </div>
+            <div class="work">
+                <img src="projet1/images/membre5.jpg">
+            </div>
+            <div class="work">
+                <img src="projet1/images/membre6.jpg">
+            </div>
+            <div class="work">
+                <img src="projet1/images/membre7.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------contact-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contactez-Nous</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>otgonbold2335@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i></i>+33 6 27 11 67 05</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100022566284346"><i class="fa-brands fa-facebook"></i></a>  
+                    <a href="https://www.instagram.com/otgonbold_m/"><i class="fa-brands fa-instagram"></i></a>   
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Nom" placeholder="Votre Nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <textarea name="Message" rows="6" placeholder="Votre message"></textarea>
+                    <button type="submit" class="btn btn2">Envoyer</button>
+                </form>
+            </div>   
+        </div>
+    </div>
+
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>     
+</body>
+</html>
